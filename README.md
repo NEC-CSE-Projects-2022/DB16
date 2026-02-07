@@ -1,5 +1,7 @@
 An Interactive PDF Chatbot Using Semantic Embeddings and FAISS-Based Vector Search
 Team Info
+
+
 22471A05M0 — D. Satish Babu
 Work Done: FAISS indexing, similarity search, performance evaluation
 
