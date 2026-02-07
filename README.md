@@ -1,16 +1,12 @@
 An Interactive PDF Chatbot Using Semantic Embeddings and FAISS-Based Vector Search
 Team Info
-
-22471A05XX — Syed Rizwana
-Work Done: System design, preprocessing pipeline, embedding generation
-
-22471A05XX — D. Satish Babu
+22471A05M0 — D. Satish Babu
 Work Done: FAISS indexing, similarity search, performance evaluation
 
-22471A05XX — K. V. S. N. S. Ashok Kumar
+22471A05M8 — K. V. S. N. S. Ashok Kumar
 Work Done: Generative model integration (FLAN-T5-XL), response generation
 
-22471A05XX — R. Chandara Sekhar
+21471A05Q2 — R. Chandara Sekhar
 Work Done: Web interface, deployment, documentation
 
 Abstract
