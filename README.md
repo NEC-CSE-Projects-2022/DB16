@@ -1,134 +1,153 @@
-Team 24 – Intelligent ML-Based Project System
+An Interactive PDF Chatbot Using Semantic Embeddings and FAISS-Based Vector Search
 Team Info
 
-22471A05XX — Member Name (LinkedIn
-)
-Work Done: Data collection, preprocessing, EDA
+22471A05XX — Syed Rizwana
+Work Done: System design, preprocessing pipeline, embedding generation
 
-22471A05XX — Member Name (LinkedIn
-)
-Work Done: Model development & training
+22471A05XX — D. Satish Babu
+Work Done: FAISS indexing, similarity search, performance evaluation
 
-22471A05XX — Member Name (LinkedIn
-)
-Work Done: Testing, evaluation & optimization
+22471A05XX — K. V. S. N. S. Ashok Kumar
+Work Done: Generative model integration (FLAN-T5-XL), response generation
 
-22471A05XX — Member Name (LinkedIn
-)
-Work Done: Deployment & documentation
+22471A05XX — R. Chandara Sekhar
+Work Done: Web interface, deployment, documentation
 
 Abstract
 
-This project focuses on building an intelligent machine learning–based system to solve a real-world problem using data-driven techniques. The system performs data preprocessing, exploratory data analysis, model training, and evaluation to achieve accurate and reliable predictions. By leveraging modern ML algorithms, the project improves efficiency and decision-making compared to traditional approaches. The solution is scalable, easy to deploy, and suitable for real-time or batch-based applications.
+The rapid growth of digital documents has created a demand for intelligent retrieval systems that move beyond traditional keyword-based search. This project presents an interactive PDF chatbot that enables users to query PDF documents using natural language. The system integrates semantic embeddings generated using Sentence-BERT, FAISS-based vector similarity search for efficient retrieval, and the FLAN-T5-XL generative model for context-aware answer generation. Unlike conventional approaches, the proposed system retrieves information based on semantic relevance rather than keyword overlap, producing accurate and coherent responses. Experimental evaluation demonstrates improved semantic similarity, reduced response time, and enhanced usability for document-intensive tasks.
 
 Paper Reference (Inspiration)
 
-👉 [Paper Title – Author Names](Paper URL here)
-This IEEE/conference paper served as the base inspiration for our approach and model design.
+👉 [An Interactive PDF Chatbot Using Semantic Embeddings and FAISS-Based Vector Search](Paper URL here)
+IEEE / Conference paper used as the base reference for the project implementation.
 
 Our Improvement Over Existing Paper
 
-Improved preprocessing and feature engineering
+Integrated semantic retrieval and generative response in a unified pipeline
 
-Optimized model parameters for better accuracy
+Improved contextual accuracy using overlapping text chunking
 
-Reduced overfitting using validation techniques
+Faster response time through optimized FAISS indexing
 
-Enhanced evaluation using multiple performance metrics
+Zero-shot capability without task-specific fine-tuning
+
+User-friendly web interface for non-technical users
 
 About the Project
 
 What the project does:
-The project takes input data, processes it using machine learning models, and produces accurate predictions or classifications.
+Allows users to upload PDF documents and ask questions in natural language to receive precise, context-aware answers.
 
 Why it is useful:
-It automates decision-making, reduces human effort, and provides reliable insights using data.
+Eliminates manual searching through large PDFs and improves information accessibility for researchers, students, and professionals.
 
 Workflow:
-Input Data → Preprocessing → Feature Engineering → Model Training → Evaluation → Output/Prediction
+PDF Upload → Text Extraction → Preprocessing → Embedding Generation → FAISS Vector Search → Answer Generation → User Response
 
 Dataset Used
 
-👉 [Dataset Name](Dataset URL)
+👉 PDF Documents (User-Uploaded)
 
 Dataset Details:
 
-Source: Kaggle / Custom dataset
+Format: PDF
 
-Number of records: XXXX
+Source: User-uploaded documents
 
-Features: XXXX
+Text extraction: PyMuPDF (fitz)
 
-Target variable: XXXX
+Chunking: Sliding window with overlap
 
 Dependencies Used
 
 Python
 
+PyMuPDF (fitz)
+
+SentenceTransformers
+
+FAISS
+
+Transformers (FLAN-T5-XL)
+
 NumPy
 
-Pandas
-
-Matplotlib / Seaborn
-
-Scikit-learn
-
-Jupyter Notebook
+Gradio
 
 EDA & Preprocessing
 
-Handling missing values
+Text extraction from PDF pages
 
-Removing duplicates and outliers
+Lowercasing and whitespace normalization
 
-Feature scaling and encoding
+Punctuation removal and tokenization
 
-Data visualization for insights
+Lemmatization for word normalization
+
+Replacement of numerical tokens
+
+Sliding-window chunking with 50% overlap
 
 Model Training Info
 
-Algorithms used: Logistic Regression / Random Forest / XGBoost / etc.
+This system does not require model training.
 
-Train-test split: 80:20
+Embeddings generated using all-MiniLM-L6-v2 SentenceTransformer
 
-Hyperparameter tuning performed using GridSearchCV
+Retrieval performed using FAISS approximate nearest neighbor search
+
+Answer generation handled by FLAN-T5-XL (instruction-tuned LLM)
+
+Zero-shot inference without fine-tuning
 
 Model Testing / Evaluation
 
-Accuracy
+Semantic similarity (cosine similarity)
 
-Precision
+Top-K retrieval accuracy
 
-Recall
+Response latency
 
-F1-Score
-
-Confusion Matrix
+Qualitative evaluation of generated answers
 
 Results
 
-The proposed model achieved improved performance compared to baseline approaches, demonstrating better accuracy and generalization on unseen data.
+Average cosine similarity: ~0.85
+
+Top-3 retrieval accuracy: >90%
+
+Reduced response time compared to baseline chatbot
+
+Improved contextual relevance and answer coherence
 
 Limitations & Future Work
 
 Limitations:
 
-Performance depends on dataset quality
+Occasional hallucinations for ambiguous queries
 
-Limited scalability for very large datasets
+Limited handling of complex tables and figures
+
+English-only support
 
 Future Work:
 
-Use deep learning models
+Domain-specific fine-tuning
 
-Deploy on cloud with real-time data
+Multilingual document support
 
-Improve accuracy using ensemble techniques
+OCR and multimodal PDF handling
+
+Cloud-based scalable deployment
+
+Feedback-based adaptive learning
 
 Deployment Info
 
-Model tested locally using Jupyter Notebook
+Implemented as a web application using Gradio
 
-Can be deployed using Flask / FastAPI
+Runs on CPU/GPU systems
 
-Frontend integration possible using React
+Can be extended to Flask/FastAPI for production deployment
+
