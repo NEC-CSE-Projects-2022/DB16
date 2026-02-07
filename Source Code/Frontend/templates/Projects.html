@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - AI PDF Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Add to all HTML files (index.html, home.html, About.html, Projects.html, Contact.html) -->
+<nav class="navbar">
+    <div class="nav-brand">AI PDF Assistant</div>
+    <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}" {% if active_page == 'home' %}class="active"{% endif %}>Home</a></li>
+        <li><a href="{{ url_for('trybot') }}" {% if active_page == 'trybot' %}class="active"{% endif %}>TryBot</a></li>
+        <li><a href="{{ url_for('about') }}" {% if active_page == 'about' %}class="active"{% endif %}>About</a></li>
+        <li><a href="{{ url_for('projects') }}" {% if active_page == 'projects' %}class="active"{% endif %}>Projects</a></li>
+        <li><a href="{{ url_for('contact') }}" {% if active_page == 'contact' %}class="active"{% endif %}>Contact</a></li>
+    </ul>
+</nav>
+
+    <div data-barba="wrapper">
+        <div data-barba="container" class="page-content">
+            <div class="container">
+                <div class="projects-hero">
+                    <h1>Our Projects</h1>
+                    <p class="hero-subtitle">Explore our innovative AI solutions</p>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon">📚</div>
+                        <h3>PDF Question Answering</h3>
+                        <p>AI-powered system for extracting information from PDFs with high accuracy and natural language processing capabilities.</p>
+                        <div class="project-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">PDF</span>
+                        </div>
+                        <a href="#" class="project-link">Learn More →</a>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon">🔍</div>
+                        <h3>Document Analysis</h3>
+                        <p>Advanced text processing and understanding using state-of-the-art machine learning algorithms.</p>
+                        <div class="project-tags">
+                            <span class="tag">ML</span>
+                            <span class="tag">Analytics</span>
+                            <span class="tag">Text</span>
+                        </div>
+                        <a href="#" class="project-link">Learn More →</a>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon">📝</div>
+                        <h3>AI Summarization</h3>
+                        <p>Automatic document summarization tools that provide concise and accurate content summaries.</p>
+                        <div class="project-tags">
+                            <span class="tag">Summary</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">Tools</span>
+                        </div>
+                        <a href="#" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 AI PDF Assistant. All rights reserved.</p>
+    </footer>
+    <div class="page-transition"></div>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="{{ url_for('static', filename='transitions.js') }}"></script>
+</body>
+</html>
